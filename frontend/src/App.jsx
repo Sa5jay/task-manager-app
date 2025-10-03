@@ -3,7 +3,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import { AlertCircle, CheckCircle, LogOut, Plus, Edit2, Trash2, Search, User, Lock, Mail, Eye, EyeOff } from 'lucide-react';
 
 // API Configuration
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://task-manager-app-2-hbmv.onrender.com/api';
 
 // Auth Context
 const AuthContext = createContext(null);
