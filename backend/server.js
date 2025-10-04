@@ -3,23 +3,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const cors = require('cors'); // Only require once
+const cors = require('cors'); 
 require('dotenv').config();
 
 const app = express();
 
-// =====================
-// Middleware
-// =====================
 app.use(cors({
-    origin: "https://task-manager-app-alpha-lime.vercel.app", // frontend URL
+    origin: "http://localhost:5173",
     credentials: true
 }));
 app.use(express.json());
 
-// =====================
-// MongoDB Connection
-// =====================
+
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/taskmanager';
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,

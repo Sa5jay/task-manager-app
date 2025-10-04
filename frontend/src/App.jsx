@@ -3,7 +3,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import { AlertCircle, CheckCircle, LogOut, Plus, Edit2, Trash2, Search, User, Lock, Mail, Eye, EyeOff } from 'lucide-react';
 
 // API Configuration
-const API_URL = 'https://task-manager-app-2-hbmv.onrender.com/api';
+const API_URL = 'http://localhost:5000/api';
 
 // Auth Context
 const AuthContext = createContext(null);
@@ -364,7 +364,8 @@ const Dashboard = () => {
     try {
       const data = await api.getTasks();
       setTasks(data);
-    } catch (error) {
+    } catch (err) {
+      console.log(err)
       setAlert({ type: 'error', message: 'Failed to load tasks' });
     }
   };
@@ -402,7 +403,8 @@ const Dashboard = () => {
       await api.deleteTask(id);
       await loadTasks();
       setAlert({ type: 'success', message: 'Task deleted successfully' });
-    } catch (error) {
+    } catch (err) {
+      console.log(err)
       setAlert({ type: 'error', message: 'Failed to delete task' });
     }
   };
