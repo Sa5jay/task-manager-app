@@ -143,7 +143,7 @@ const Input = ({ label, type = 'text', value, onChange, error, icon: Icon, ...pr
 };
 
 const Button = ({ children, variant = 'primary', loading = false, ...props }) => {
-  const baseClasses = "px-4 py-2 rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseClasses = "px-4 py-2  rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
   const variants = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
@@ -248,7 +248,7 @@ const RegisterPage = ({ onNavigate }) => {
             onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
             error={errors.confirmPassword}
           />
-          <Button onClick={handleSubmit} loading={loading} className="w-full">
+          <Button onClick={handleSubmit} loading={loading} className="w-full bg-blue-600 text-white  hover:bg-blue-700 py-2 rounded-lg hover:cursor-pointer">
             Register
           </Button>
         </div>
@@ -328,7 +328,7 @@ const LoginPage = ({ onNavigate }) => {
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             error={errors.password}
           />
-          <Button onClick={handleSubmit} loading={loading} className="w-full">
+          <Button onClick={handleSubmit} loading={loading} className="w-full py-2 bg-blue-600 text-white  hover:bg-blue-700 rounded-lg hover:cursor-pointer">
             Login
           </Button>
         </div>
