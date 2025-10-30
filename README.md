@@ -25,7 +25,7 @@ A modern full-stack task management application built with the MERN stack (Mongo
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Shanjana-03/task.git
+git clone https://github.com/Sa5jay/task-manager-app.git
 cd task-manager-app
 ```
 
@@ -90,4 +90,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-[Shanjana-03](https://github.com/Shanjana-03)
+[Sa5jay](https://github.com/Sa5jay)
